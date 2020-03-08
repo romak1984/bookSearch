@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Book details</h1>
+<div mat-dialog-content>
+
+  <div class="info-container">
+    <label>Title:</label>
+    <span>{{data.volumeInfo.title}}</span>
+  </div>
+
+  <mat-divider></mat-divider>
+
+
+  <div class="info-container">
+    <label>Subtitle:</label>
+    <span>{{data.volumeInfo.subtitle}}</span>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="info-container">
+    <label>Authors:</label>
+    <span>{{data.volumeInfo.authors}}</span>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="info-container">
+    <label>Language:</label>
+    <span>{{data.language}}</span>
+  </div>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Add to wishlist</button>
+</div>

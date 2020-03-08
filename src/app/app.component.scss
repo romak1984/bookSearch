@@ -1,0 +1,22 @@
+.fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+  .nav-link{
+    text-decoration: none;
+    color: white;
+  }
+
+  .welcome-content{
+    margin-right: 20px;
+  }
+
+  .toolbar-content{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .content-container{
+    height: calc(100% - 70px);
+    overflow: auto;
+  }

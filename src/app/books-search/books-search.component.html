@@ -1,0 +1,4 @@
+<div>
+    <app-search-box (search)="onSearch($event)"></app-search-box>
+    <app-books-table [books]="books" (selected)="bookSelected($event)"></app-books-table>
+</div>

@@ -1,0 +1,22 @@
+<mat-table [dataSource]="books" class="mat-elevation-z8">
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.volumeInfo.title}} </mat-cell>
+    </ng-container>
+  
+    <!-- Subtitle Column -->
+    <ng-container matColumnDef="subtitle">
+      <mat-header-cell *matHeaderCellDef> Subtitle </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.volumeInfo.subtitle}} </mat-cell>
+    </ng-container>
+  
+    <!-- Authors Column -->
+    <ng-container matColumnDef="authors">
+      <mat-header-cell *matHeaderCellDef> Authors </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.volumeInfo.authors}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="bookSelected(row)"></mat-row>
+  </mat-table>
